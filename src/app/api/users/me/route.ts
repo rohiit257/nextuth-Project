@@ -1,7 +1,10 @@
 import User from "@/models/user.model";
 import { NextResponse, NextRequest } from "next/server";
 import { getDataFromToken } from "@/helpers/getDataFromToken";
+import { connectDb } from "@/db/db";
 
+
+connectDb()
 export async function GET(request: NextRequest) {
   try {
     const userId = await getDataFromToken(request);

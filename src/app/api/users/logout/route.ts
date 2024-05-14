@@ -1,6 +1,7 @@
+import { connectDb } from "@/db/db";
 import { NextResponse, NextRequest } from "next/server";
 
-
+connectDb()
 export async function POST(request:NextRequest){
     //login m cookies access krke token ko null krdena hota h aur uska expiry bhi expire kradena hota h
 
